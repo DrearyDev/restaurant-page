@@ -42,6 +42,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    gap: 50px;
 }
 
 .header {
@@ -104,4 +105,31 @@ body {
 }
 .home-heading p .small {
     font-size: 3rem;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+.reviewer {
+    width: 400px;
+}
+.review > div {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+.review > div .bold {
+    font-family: inherit;
+    font-weight: bolder;
+}
+.review > div .end {
+    font-family: inherit;
+    width: 100%;
+
+    padding-right: 30px;
+
+    display: flex;
+    justify-content: end;
 }

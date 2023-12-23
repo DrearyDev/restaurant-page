@@ -1,4 +1,5 @@
 import pastelImg from './pastel.png';
+import reviewerImg from './reviewer.jpg';
 
 const content = document.querySelector('.content');
 
@@ -22,9 +23,33 @@ const createHomeHeading = (() => {
     return homeHeading;
 })();
 
+const createReview = (() => {
+    //create image of reviewer
+    const reviewer = new Image();
+    reviewer.src = reviewerImg;
+    reviewer.setAttribute('draggable', false);
+    reviewer.classList.add('reviewer');
+
+    //create div for text
+    let comment = document.createElement('div');
+    comment.innerHTML = `"I was given Diabetes after<br>
+    just <span class="bold">ONE MEAL</span> at Pastels Mellow Food!!!"<br><br>
+    <span class="end">- fat gus</span>`;
+
+    //combine reviewerImg and comment
+    let review = document.createElement('div');
+    review.classList.add('review');
+    review.appendChild(reviewer);
+    review.appendChild(comment);
+
+    return review;
+})();
+
+
+
 function home() {
     content.appendChild(createHomeHeading);
-
+    content.appendChild(createReview);
 
 };
 
