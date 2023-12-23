@@ -1,5 +1,6 @@
 import pastelImg from './pastel.png';
 import reviewerImg from './reviewer.jpg';
+import locationImg from './location.png';
 
 const content = document.querySelector('.content');
 
@@ -45,11 +46,38 @@ const createReview = (() => {
     return review;
 })();
 
+const createLocation = (() => {
+    //create image of location
+    const location = new Image();
+    location.src = locationImg;
+    location.setAttribute('draggable', false);
 
+    //create title for section with location
+    let title = document.createElement('div');
+    title.textContent = `Come Visit Us at:`;
+    title.classList.add('title');
+
+    //create div for text
+    let address = document.createElement('p');
+    address.classList.add('address')
+    address.innerText = `3730 SugerCane Crescent, WhinePeg, ON L4T 2Z4, America`;
+
+    //combine locationImg and address
+    let locationDiv = document.createElement('div');
+    locationDiv.classList.add('location');
+    locationDiv.appendChild(title);
+    let div = document.createElement('div');
+    div.appendChild(address);
+    div.appendChild(location);
+    locationDiv.appendChild(div);
+
+    return locationDiv;
+})();
 
 function home() {
     content.appendChild(createHomeHeading);
     content.appendChild(createReview);
+    content.appendChild(createLocation);
 
 };
 
