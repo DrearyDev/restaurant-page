@@ -36,11 +36,12 @@ body {
     width: 100%;
     border-radius: 10px;
     background-color: var(--CONTENT-BG-COLOR);
+    padding-top: 30px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
 .header {
@@ -78,4 +79,29 @@ body {
 }
 .header .tabs .tab.clicked {
     background-color: var(--CONTENT-BG-COLOR);
+}
+
+.home-heading {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.pastel {
+    height: 200px;
+    width: auto;
+}
+.home-heading p {
+    font-size: 4rem;
+    text-align: center;
+    rotate: -3deg;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home-heading p .big {
+    font-size: 4.5rem;
+}
+.home-heading p .small {
+    font-size: 3rem;
 }
