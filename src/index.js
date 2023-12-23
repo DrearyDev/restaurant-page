@@ -7,8 +7,13 @@ import { initializeHeader } from './initializeHeader.js';
 initializeHeader();
 
 // clicking on tabs
+const content = document.querySelector('.content');
 let tabs = [...document.querySelector('.tabs').children];
-tabs[0].classList.add('clicked'); // home tab clicked by default
+
+// home tab clicked by default
+tabs[0].classList.add('clicked');
+home();
+
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
         tabs.forEach(tab => {
@@ -16,6 +21,8 @@ tabs.forEach(tab => {
         });
 
         tab.classList.add('clicked');
+
+        content.innerHTML = '';
 
         switch (tab.textContent) {
             case 'Home':
