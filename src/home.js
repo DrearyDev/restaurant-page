@@ -46,16 +46,20 @@ const createReview = (() => {
     return review;
 })();
 
+const createLocationTitle = (() => {
+    //create title for section with location
+    let title = document.createElement('div');
+    title.textContent = `Come Visit Us at:`;
+    title.classList.add('location-title');
+
+    return title;
+})();
+
 const createLocation = (() => {
     //create image of location
     const location = new Image();
     location.src = locationImg;
     location.setAttribute('draggable', false);
-
-    //create title for section with location
-    let title = document.createElement('div');
-    title.textContent = `Come Visit Us at:`;
-    title.classList.add('title');
 
     //create div for text
     let address = document.createElement('p');
@@ -65,7 +69,6 @@ const createLocation = (() => {
     //combine locationImg and address
     let locationDiv = document.createElement('div');
     locationDiv.classList.add('location');
-    locationDiv.appendChild(title);
     let div = document.createElement('div');
     div.appendChild(address);
     div.appendChild(location);
@@ -77,6 +80,7 @@ const createLocation = (() => {
 function home() {
     content.appendChild(createHomeHeading);
     content.appendChild(createReview);
+    content.appendChild(createLocationTitle);
     content.appendChild(createLocation);
 
 };
