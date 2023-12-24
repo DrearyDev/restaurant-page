@@ -25,8 +25,6 @@ const AddMenuItem = (img, desc, reverse) => {
     description.textContent = desc;
 
     if (reverse){
-        description.style.marginRight = '0px';
-        description.style.marginLeft = '75px';
         newImage.classList.add('reverse');
         menuItem.appendChild(description);
         menuItem.appendChild(newImage);

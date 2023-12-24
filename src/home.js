@@ -33,8 +33,8 @@ const createReview = (() => {
 
     //create div for text
     let comment = document.createElement('div');
-    comment.innerHTML = `"I was given Diabetes after<br>
-    just <span class="bold">ONE MEAL</span> at Pastels Mellow Food!!!"<br><br>
+    comment.innerHTML = `"I was given Diabetes after
+    just <span class="bold">ONE MEAL</span> at Pastels Mellow Food!!!"
     <span class="end">- fat gus</span>`;
 
     //combine reviewerImg and comment
