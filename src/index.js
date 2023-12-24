@@ -3,8 +3,10 @@ import { home } from './home.js';
 import { menu } from './menu.js';
 import { contact } from './contact.js';
 import { initializeHeader } from './initializeHeader.js';
+import { initializeFooter } from './initializeFooter.js';
 
 initializeHeader();
+initializeFooter();
 
 // clicking on tabs
 const content = document.querySelector('.content');
